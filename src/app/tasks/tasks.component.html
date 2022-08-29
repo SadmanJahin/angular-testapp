@@ -1,16 +1,28 @@
 
-<div class="text-center align-item-center">
-<div>
+<div class="text-center align-item-center m-5 p-5">
 
-    <p class="h1 m-2">Tasks</p>
+    <div *ngIf="!isLoggedIn"><p class="h2">You Must Log In First.</p> </div>
+    <div  *ngIf="isLoggedIn">
 
-    <br>
-    
-    <ul *ngFor="let item of list">
-    
-        <li class="mr-5">{{item}}</li>
-    
-    </ul>
+        <p class="h1 m-2 py-2">Tasks</p>
+
+        <br>
+        
+        <ul *ngFor="let item of list">
+        
+           
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    <p class="h5"><b>{{item.taskName}}</b> : {{item.taskDescription }}</p>
+                    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                
+                
+                
+              
+            
+        </ul>
     </div>
 
 

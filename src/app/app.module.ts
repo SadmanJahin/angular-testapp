@@ -8,8 +8,11 @@ import { FooterComponent } from './footer/footer.component';
 
 import {FormsModule} from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
+import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { TasksComponent } from './tasks/tasks.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
@@ -23,7 +26,10 @@ import { TasksComponent } from './tasks/tasks.component';
   imports: [
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    BrowserAnimationsModule,
+    NgxSpinnerModule,
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
