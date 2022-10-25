@@ -1,0 +1,33 @@
+
+.float{
+	position:fixed;
+	width:60px;
+	height:60px;
+	bottom:150px;
+	right:40px;
+	color:#FFF;
+	border-radius:50px;
+	text-align:center;
+	
+}
+
+.my-float{
+	margin-top:22px;
+}
+
+
+/*
+  .float:active {
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+  }
+  
+*/
+
+  .float:not(:active) {
+    -webkit-transform: rotate(360deg);
+    -webkit-transition-duration: 1s;
+  }
+
+
+  

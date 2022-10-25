@@ -12,6 +12,7 @@ export class LoginComponent implements OnInit {
 
   isUser:boolean=false;
   isLoggedIn:boolean=JSON.parse(localStorage.getItem('loggedIn')||'false'); 
+  isLoggedOut:boolean=false;
   userNotFound:boolean=false;
   serverNotFound:boolean=false;
   errorDetails:string="";
@@ -30,7 +31,8 @@ export class LoginComponent implements OnInit {
   
  loginUser(data:any)
  {
-  //console.warn(data)
+  this.isLoggedOut=false;
+
   this.spinner.show();
  
   this.authentication.validateUser(data).subscribe((value:any)=>{
@@ -67,7 +69,8 @@ export class LoginComponent implements OnInit {
  logoutUser(){
 
   localStorage.setItem('loggedIn','false')
-  window.location.reload();
+  this.isLoggedIn=false;
+  this.isLoggedOut=true;
  }
  
 

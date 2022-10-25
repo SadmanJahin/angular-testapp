@@ -13,6 +13,8 @@ import { HomeComponent } from './home/home.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgxSpinnerModule } from 'ngx-spinner';
+import { FloatingBtnComponent } from './floating-btn/floating-btn.component';
+import { ErrorNopageComponent } from './error-nopage/error-nopage.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { NgxSpinnerModule } from 'ngx-spinner';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    TasksComponent
+    TasksComponent,
+    FloatingBtnComponent,
+    ErrorNopageComponent
   ],
   imports: [
     BrowserModule,
